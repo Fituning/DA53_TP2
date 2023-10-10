@@ -1,0 +1,27 @@
+options {
+IGNORE_CASE = true;
+STATIC = false;
+}
+PARSER_BEGIN(TinyBasicParser)
+package fr.utbm.gi.lo46.tp2.parser;
+import java.util.SortedMap;
+import java.util.Map;
+import java.util.List;
+import java.util.TreeMap;
+import java.util.ArrayList;
+import fr.utbm.gi.lo46.tp2.context.*;
+import fr.utbm.gi.lo46.tp2.symbol.*;
+import fr.utbm.gi.lo46.tp2.syntaxtree.*;
+
+
+public class TinyBasicParser {
+    private int basicLineNumber = 1;
+    private final SymbolTable symbolTable = new SymbolTable();
+    /** Replies the symbol table used by the parser.
+    * @return the symbol table.
+    */
+    public SymbolTable getSymbolTable() {
+        return this.symbolTable;
+    }
+}
+PARSER_END(TinyBasicParser)
